@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="outer">
+    <form class="wrapper" action="">
+    <div class="entry">
+    <label for="email">Email</label>
+    <input type="email" id="usremail"  class="" placeholder="Enter the email" required>
+    </div>
+    <div class="entry">
+    <label for="password">Password</label>
+    <input type="password" id="usrpassword"  class="" placeholder="Enter the password" required>
+    </div>
+    <div class="submit1">
+    <input type="submit" id="submit">
+    </div>
+</form>
+</div>
+
+    <script>
+
+async function test(){
+            console.log("hii")
+            let obj={
+                "email":document.querySelector("#usremail").value,
+                "password":document.querySelector("#usrpassword").value
+            }
+
+            await fetch("https://reqres.in/api/login",{
+            method:'POST',
+            body: JSON.stringify(obj),
+            headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+             }
+        })
+        .then((response) => response.json())
+        .then((json) => console.log(json))
+        .catch(error=>console.log("Cant fetch data"));
+    }
+        document.getElementById("submit").addEventListener("click",trr)
+        
+        function trr(e){
+            e.preventDefault();
+            test();
+        }
+       
+    </script>
+</body>
+</html>

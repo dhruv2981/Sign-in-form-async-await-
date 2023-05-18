@@ -1,0 +1,40 @@
+.outer {
+  display: flex;
+
+  justify-content: center;
+  /* background-color: linear-gradient(to right, #ffefba,#ffffff); */
+  background-image: linear-gradient(to right, #ffefba, #ffffff);
+  margin-bottom: 2rem;
+  padding: 3rem 0rem 3rem 0rem;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1.5rem 3rem 2rem 3rem;
+  border-radius: 3px;
+  background-image: linear-gradient(
+    to left,
+
+    #f196a8df,
+    #ffedbc
+  );
+  width: max-content;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; ;
+}
+.entry {
+  margin-top: 1rem;
+}
+.entry > input {
+  display: block;
+}
+.entry > label {
+  display: block;
+}
+
+.submit1 {
+  text-align: left;
+
+  margin-top: 1rem;
+}
